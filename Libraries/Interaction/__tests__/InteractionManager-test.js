@@ -302,7 +302,7 @@ describe('promise tasks', () => {
   });
 
   it('should also work with a deadline', () => {
-    InteractionManager.setDeadline(100);
+    InteractionManager.setDeadline(120);
     BatchedBridge.getEventLoopRunningTime.mockReturnValue(200);
     return new Promise(bigAsyncTest);
   });

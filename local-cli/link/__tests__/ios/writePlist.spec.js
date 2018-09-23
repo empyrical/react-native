@@ -17,10 +17,10 @@ let plistPath = null;
 jest.mock('../../ios/getPlistPath', () => () => plistPath);
 
 const {readFileSync} = require.requireActual('fs');
+const path = require('path');
 const fs = require('fs');
 
 const xcode = require('xcode');
-const path = require('path');
 const writePlist = require('../../ios/writePlist');
 
 const projectPath = path.join(__dirname, '../../__fixtures__/project.pbxproj');
