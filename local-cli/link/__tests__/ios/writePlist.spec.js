@@ -16,9 +16,9 @@ jest.mock('fs');
 let plistPath = null;
 jest.mock('../../ios/getPlistPath', () => () => plistPath);
 
-const {readFileSync} = require.requireActual('fs');
 const path = require('path');
 const fs = require('fs');
+const {readFileSync} = require.requireActual('fs');
 
 const xcode = require('xcode');
 const writePlist = require('../../ios/writePlist');
